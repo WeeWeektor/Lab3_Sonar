@@ -1,10 +1,3 @@
-import os
-
-
-def unused_function():
-    x = 10
-
-
 def read_file(filename):
     file = open(filename, 'r')
     data = file.read()
@@ -18,7 +11,7 @@ def dangerous_function(user_input):
 def main():
     filename = "test.txt"
 
-    if filename is "test.txt":
+    if filename == "test.txt":
         print("Opening file:", filename)
 
     content = read_file(filename)

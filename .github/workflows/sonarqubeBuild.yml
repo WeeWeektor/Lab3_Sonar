@@ -20,4 +20,4 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         with:
-          args: -Dsonar.projectKey= -X
+          args: -Dsonar.projectKey=WeeWeektor_Lab3_Sonar_015649ad-2c50-4bf9-bf6b-5c0df1cc9264 -X

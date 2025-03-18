@@ -1,0 +1,23 @@
+name: sonarqubeBuild
+
+on:
+  push:
+    branches:
+      - master
+
+
+jobs:
+  build:
+    name: Build and analyze
+    runs-on: windows-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: SonarSource/sonarqube-scan-action@v4
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+        with:
+          args: -Dsonar.projectKey=WeeWeektor_Lab3_Sonar_015649ad-2c50-4bf9-bf6b-5c0df1cc9264 -X
